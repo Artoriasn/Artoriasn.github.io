@@ -70,6 +70,9 @@ Spark SQL总览​    一般来讲，对于Spark SQL系统，从SQL到Spark中�
 </blockquote>
 <h2 id="Spark-SQL总览"><a href="#Spark-SQL总览" class="headerlink" title="Spark SQL总览"></a>Spark SQL总览</h2><p>​    一般来讲，对于Spark SQL系统，从SQL到Spark中的RDD的执行需要经过两个大的阶段，分别是逻辑计划（LogicalPlan）和物理计划（PhysicalPlan），如下图所示：</p>
 <p><img src="http://ww1.sinaimg.cn/large/006y8mN6ly1g6ngi31p90j30xi0g4myc.jpg" alt></p>
+<p>​    逻辑计划阶段会将用户所写的SQL语句转换成树型数据结构（逻辑算子树），SQL语句中蕴含的逻辑映射到逻辑算子树的不同节点。顾名思义，逻辑计划阶段生成的逻辑算子树并不会直接提交执行，仅仅作为中间阶段。最终逻辑算子树的生成过程经历3个阶段，分别对应未解析的逻辑算子树（Unresolved LogicalPlan,仅仅是数据结构，不包含任何数据信息等），解析后的逻辑算子树（Analyzed LogicalPlan，节点绑定各种信息），和优化后的逻辑算子树（Optimized LogicalPlan,应用各种优化规则对一些低效的逻辑计划进行转换）。</p>
+<p>​    物理计划阶段将上一步逻辑计划阶段生成的逻辑算子树进行进一步转换，生成物理算子树。物理算子树的节点会直接生成RDD或对RDD进行Transformation操作（注：每个物理计划节点中都实现了对RDD进行转换的execute方法）。同样地，物理计划阶段也包含3个子阶段：首先，根据逻辑算子树，生成物理算子树的列表Iterator[PhyicalPlan] (同样的逻辑算子树可能对应多个物理算子树)；然后，从列表中按照一定策略选取最优的物理算子树（SparkPlan）；最后，对选取的物理算子树进行提交前的准备工作，例如，确保分区操作正确，物理算子树节点重用，执行代码生成等，得到“准备后”的物理算子树（Prepared SparkPlan）。经过行数步骤后的物理算子树生成的RDD执行action操作，即可提交执行。</p>
+<p>## </p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
