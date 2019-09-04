@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Archive: 2019/9</title>
+    <title>SparkSQL 解析-SQL编译器Parser - Hexo</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="Fechin,"> 
-    
+    <meta name="description" content="ANTLR 简介​        ANTLR（Another Tool for Language Recognition）是目前非常活跃的语法生成工具，用java语言编写。ANTLR的应用非常广泛，,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
     
@@ -30,38 +30,67 @@
 <body class="loading">
     <span id="config-title" style="display:none">Hexo</span>
     <div id="loader"></div>
-    <div id="single" class="page">
-    <div id="top">
-        <a class="icon-left image-icon" href="javascript:history.back()"></a>
-    </div>
-    <div class="section">
-        <div class="article">
-            <div class="main">
-                <div class="content">
-                    <div class="timeline">
-                      <h2 class="timeline-title">归档: 3篇</h2>
-                      
-                        
-                          <h3 class="timeline-subtitle">2019</h3>
-                        
-                        <div class="timeline-item">
-                          <time>2019-09-04</time>
-                          <a target="_self" href="/2019/09/04/SparkSQL-解析-SQL编译器Parser/">SparkSQL 解析-SQL编译器Parser</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2019-09-04</time>
-                          <a target="_self" href="/2019/09/04/SparkSQL-解析-全局预览/">SparkSQL 解析-全局预览</a>
-                        </div>
-                      
-                    </div>
-                </div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="http://www.artorias.org"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">SparkSQL 解析-SQL编译器Parser</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
             </div>
+            <div id="qr"></div>
         </div>
     </div>
+    <div class="scrollbar"></div>
 </div>
 
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">SparkSQL 解析-SQL编译器Parser</h1>
+        <div class="stuff">
+            <span>九月 04, 2019</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/spark-sql/">spark sql</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <h2 id="ANTLR-简介"><a href="#ANTLR-简介" class="headerlink" title="ANTLR 简介"></a>ANTLR 简介</h2><p>​        ANTLR（Another Tool for Language Recognition）是目前非常活跃的语法生成工具，用java语言编写。ANTLR的应用非常广泛，Hibernate与WebLogic都使用ANTLR解析HQL语言。</p>
+<p>​        ANTLR4是进行SparkSQL开发的基础，在ANTLR4中，词法和语法可以放在同一个G4文件中。关于antlr4的语法后续后写一系列文章分析。</p>
+<h2 id="SparkSqlParser"><a href="#SparkSqlParser" class="headerlink" title="SparkSqlParser"></a>SparkSqlParser</h2><p>​        在sparkSQL中，Catalyst提供了直接面向用户的ParserInterface接口，该接口包含了对SQL语句，Expression表达式和Tabledentifier数据表标识符的解析方法，AbstractSqlParser是实现了ParserInterface接口的虚类，其中定义了返回AstBuilder的函数。</p>
+<p>​        整个SQL解析相关的实现如下图所示</p>
+<p><img src alt="![](http://ww3.sinaimg.cn/large/006y8mN6ly1g6nlm959vaj31cc0rqwo6.jpg)"></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                </ul>
+            
+        </div>
+        
+
+    </div>
+    
+        <div class='side'>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ANTLR-简介"><span class="toc-number">1.</span> <span class="toc-text">ANTLR 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SparkSqlParser"><span class="toc-number">2.</span> <span class="toc-text">SparkSqlParser</span></a></li></ol>
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
 </body>
 <script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
