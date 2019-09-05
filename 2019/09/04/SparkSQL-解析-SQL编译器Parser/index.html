@@ -64,9 +64,8 @@
         <div class="content markdown">
             <h2 id="ANTLR-简介"><a href="#ANTLR-简介" class="headerlink" title="ANTLR 简介"></a>ANTLR 简介</h2><p>​        ANTLR（Another Tool for Language Recognition）是目前非常活跃的语法生成工具，用java语言编写。ANTLR的应用非常广泛，Hibernate与WebLogic都使用ANTLR解析HQL语言。</p>
 <p>​        ANTLR4是进行SparkSQL开发的基础，在ANTLR4中，词法和语法可以放在同一个G4文件中。关于antlr4的语法后续后写一系列文章分析。</p>
-<h2 id="SparkSqlParser"><a href="#SparkSqlParser" class="headerlink" title="SparkSqlParser"></a>SparkSqlParser</h2><p>​        在sparkSQL中，Catalyst提供了直接面向用户的ParserInterface接口，该接口包含了对SQL语句，Expression表达式和Tabledentifier数据表标识符的解析方法，AbstractSqlParser是实现了ParserInterface接口的虚类，其中定义了返回AstBuilder的函数。</p>
-<p>​        整个SQL解析相关的实现如下图所示</p>
-<p><img src="http://ww3.sinaimg.cn/large/006y8mN6ly1g6nlvtum3aj31cc0rqqad.jpg" alt></p>
+<h2 id="SparkSqlParser"><a href="#SparkSqlParser" class="headerlink" title="SparkSqlParser"></a>SparkSqlParser</h2><p>​        在sparkSQL中，Catalyst提供了直接面向用户的ParserInterface接口，该接口包含了对SQL语句，Expression表达式和Tabledentifier数据表标识符的解析方法，AbstractSqlParser是实现了ParserInterface接口的虚类，其中定义了返回AstBuilder的函数。整个SQL解析相关的实现如下图所示:</p>
+<p><img src="http://ww3.sinaimg.cn/large/006y8mN6ly1g6nlvtum3aj31cc0rqqad.jpg" alt="继承体系"></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
