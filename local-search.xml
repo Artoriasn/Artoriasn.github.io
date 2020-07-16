@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Hbase Compaction实现(一)</title>
+    <link href="/2020/07/16/Hbase-Compaction%E5%AE%9E%E7%8E%B0-%E4%B8%80/"/>
+    <url>/2020/07/16/Hbase-Compaction%E5%AE%9E%E7%8E%B0-%E4%B8%80/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Hbase-Compaction实现-一"><a href="#Hbase-Compaction实现-一" class="headerlink" title="Hbase Compaction实现(一)"></a>Hbase Compaction实现(一)</h1><blockquote><p>Hbase 中的用户数据在LSM体系架构中最终会形成一个一个小的HFile文件。我们知道，HFile小文件如果数量太多会导致读取低效。为了提高读取效率，LSM树体系架构设计了一个非常重要的模块：<strong>Compaction</strong>。Compaction 核心功能是将小文件合并成大文件，提升读取效率。</p></blockquote><h2 id="1-Compaction-基本工作原理"><a href="#1-Compaction-基本工作原理" class="headerlink" title="1. Compaction 基本工作原理"></a>1. Compaction 基本工作原理</h2><p>​    Compaction是从一个Region的Store中选择部分HFile文件进行合并。合并原理是，先从这些待合并的数据文件中依次</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>hbase</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Raft论文理解</title>
     <link href="/2020/06/26/Raft%E8%AE%BA%E6%96%87%E7%90%86%E8%A7%A3/"/>
     <url>/2020/06/26/Raft%E8%AE%BA%E6%96%87%E7%90%86%E8%A7%A3/</url>
